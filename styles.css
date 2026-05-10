@@ -14,6 +14,12 @@ body {
     gap: 12px;
     z-index: 9999; /* le rend visible au-dessus de tout */
 }
+.lang-switch a {
+    color: #6a4bc3;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+}
 
 /* HERO */
 .hero {
