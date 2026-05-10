@@ -60,8 +60,9 @@ body {
 }
 
 .app-icon {
-    height: 97px;
-    width: auto;
+    max-width: 120px;   /* taille max sur grand écran */
+    width: 100%;        /* se réduit automatiquement */
+    height: auto;       /* garde les proportions */
     border-radius: 20px;
     margin-right: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -77,8 +78,9 @@ body {
 }
 
 .store-badge img {
-    height: 97px;
-    width: auto;
+    max-width: 160px;   /* taille max sur grand écran */
+    width: 100%;        /* se réduit automatiquement */
+    height: auto;       /* garde les proportions */
     transition: transform 0.2s ease;
 }
 
