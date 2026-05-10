@@ -48,10 +48,21 @@ body {
     margin-bottom: 30px;
 }
 
+.store-badge img {
+    height: 55px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.store-badge img:hover {
+    transform: scale(1.05);
+}
+
 .store-buttons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 
 .store-btn {
