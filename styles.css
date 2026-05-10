@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #efeeff;
+    color: #2a1f4a;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 0, 80, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.store-btn {
+    padding: 12px 20px;
+    background: #f4c542;
+    color: #2a1f4a;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FEATURES */
+.features {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* WHY */
+.why {
+    padding: 80px 20px;
+    text-align: center;
+    background: #6a4bc3;
+    color: white;
+}
+
+/* SCREENSHOTS */
+.screenshots {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.screens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.screen-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.placeholder {
+    background: #6a4bc3;
+    color: white;
+    padding: 40px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* FAQ */
+.faq {
+    padding: 80px 20px;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #2a1f4a;
+    color: white;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #f4c542;
+    text-decoration: none;
+}
