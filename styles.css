@@ -48,6 +48,22 @@ body {
     margin-bottom: 30px;
 }
 
+.app-icon {
+    height: 55px;
+    width: auto;
+    border-radius: 12px;
+    margin-right: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.store-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
 .store-badge img {
     height: 55px;
     width: auto;
