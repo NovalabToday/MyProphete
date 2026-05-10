@@ -15,7 +15,7 @@ body {
     z-index: 9999; /* le rend visible au-dessus de tout */
 }
 .lang-switch a {
-    color: #6a4bc3;
+    color: #f4c542;
     font-weight: 600;
     text-decoration: none;
     font-size: 1rem;
