@@ -139,15 +139,95 @@
 </div>
     
 <script>
-function openLightbox(src) {
-    document.getElementById("lightbox-img").src = src;
+const galleryImages = [
+    "./images/screen1.jpg",
+    "./images/screen2.jpg",
+    "./images/screen3.jpg",
+    "./images/screen4.jpg",
+    "./images/screen5.jpg",
+    "./images/screen6.jpg"
+];
+
+let currentIndex = 0;
+let touchStartX = 0;
+let touchStartY = 0;
+
+function openLightbox(index) {
+    currentIndex = index;
+    updateLightbox();
     document.getElementById("lightbox").style.display = "flex";
 }
 
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
+function closeLightbox(event) {
+    if (event.target.id === "lightbox" || event.target.classList.contains("counter")) {
+        document.getElementById("lightbox").style.display = "none";
+    }
 }
+
+function updateLightbox() {
+    const img = document.getElementById("lightbox-img");
+    const counter = document.getElementById("lightbox-counter");
+
+    img.classList.add("fade-out");
+
+    setTimeout(() => {
+        img.src = galleryImages[currentIndex];
+        img.classList.remove("fade-out");
+    }, 200);
+
+    counter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+
+    preloadNextImage();
+}
+
+function nextImage(event) {
+    event.stopPropagation();
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    updateLightbox();
+}
+
+function prevImage(event) {
+    event.stopPropagation();
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateLightbox();
+}
+
+function preloadNextImage() {
+    const next = new Image();
+    next.src = galleryImages[(currentIndex + 1) % galleryImages.length];
+}
+
+/* Navigation clavier */
+document.addEventListener("keydown", (e) => {
+    const lb = document.getElementById("lightbox");
+    if (lb.style.display !== "flex") return;
+
+    if (e.key === "ArrowRight") nextImage(e);
+    if (e.key === "ArrowLeft") prevImage(e);
+    if (e.key === "Escape") lb.style.display = "none";
+});
+
+/* Swipe mobile */
+document.getElementById("lightbox").addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+});
+
+document.getElementById("lightbox").addEventListener("touchend", (e) => {
+    let dx = e.changedTouches[0].screenX - touchStartX;
+    let dy = e.changedTouches[0].screenY - touchStartY;
+
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) nextImage(e);
+        else prevImage(e);
+    }
+
+    if (dy > 80) {
+        document.getElementById("lightbox").style.display = "none";
+    }
+});
 </script>
+
 
 </body>
 </html>
