@@ -85,14 +85,19 @@
     <h2>Découvrez l’application</h2>
 
     <div class="gallery-grid">
-        <img src="images/screen1.jpg" alt="Écran Aujourd’hui">
-        <img src="images/screen2.jpg" alt="Horoscope personnalisé">
-        <img src="images/screen3.jpg" alt="Écran Révélation">
-        <img src="images/screen4.jpg" alt="Tirage Runes">
-        <img src="images/screen5.jpg" alt="Synastrie">
-        <img src="images/screen6.jpg" alt="Portrait spirituel">
+        <img src="images/screen1.jpg" alt="Écran Aujourd’hui" onclick="openLightbox(this.src)">
+        <img src="images/screen2.jpg" alt="Horoscope personnalisé" onclick="openLightbox(this.src)">
+        <img src="images/screen3.jpg" alt="Écran Révélation" onclick="openLightbox(this.src)">
+        <img src="images/screen4.jpg" alt="Réponse à une question" onclick="openLightbox(this.src)">
+        <img src="images/screen5.jpg" alt="Synastrie" onclick="openLightbox(this.src)">
+        <img src="images/screen6.jpg" alt="Portrait spirituel" onclick="openLightbox(this.src)">
     </div>
 </section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+</div>
 
 
     <!-- FAQ -->
