@@ -133,7 +133,7 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-/* Lightbox */
+/* Lightbox ULTRA PRO */
 .lightbox {
     display: none;
     position: fixed;
@@ -145,7 +145,70 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 99999;
+    overflow: hidden;
 }
+
+/* Image */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    transition: opacity 0.3s ease;
+}
+
+/* Fade animation */
+.fade {
+    opacity: 1;
+}
+.fade-out {
+    opacity: 0;
+}
+
+/* Flèches bold style Airbnb */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 42px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    padding: 18px 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.left {
+    left: 30px;
+}
+
+.arrow.right {
+    right: 30px;
+}
+
+/* Compteur */
+.counter {
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .arrow {
+        font-size: 32px;
+        padding: 14px 18px;
+    }
+}
+
 
 .lightbox img {
     max-width: 90%;
