@@ -5,6 +5,14 @@ body {
     color: #2a1f4a;
 }
 
+/* SELECTEUR LANGUE */
+.lang-switch a {
+    margin: 0 8px;
+    color: #f4c542;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 /* HERO */
 .hero {
     position: relative;
