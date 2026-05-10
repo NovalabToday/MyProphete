@@ -63,6 +63,7 @@ body {
     max-width: 120px;   /* taille max sur grand écran */
     width: 100%;        /* se réduit automatiquement */
     height: auto;       /* garde les proportions */
+    flex-shrink: 1; /* autorise l’icône à rétrécir */
     border-radius: 20px;
     margin-right: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
@@ -75,6 +76,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 25px;
+    flex-wrap: wrap; /* permet aux éléments de passer à la ligne si nécessaire */
 }
 
 .store-badge img {
